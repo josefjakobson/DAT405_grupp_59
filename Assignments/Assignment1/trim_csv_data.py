@@ -23,16 +23,14 @@ def updatefile(csvfile, updatedlist):
 def equalize(csvfile1, csvfile2):
     data1 = pd.read_csv(csvfile1)
     data2 = pd.read_csv(csvfile2)
-    formatted_data1 = list(data1["Entity"])
-    formatted_data2 = list(data2["Entity"])
-    for country1 in formatted_data1:
-        if country1 not in formatted_data2:
+    formatted_data1 = set(data1["Entity"])
+    formatted_data2 = set(data2["Entity"])
+    symmetric_difference = formatted_data1 ^ formatted_data2
+    for country in symmetric_difference:
+        if country in formatted_data1:
             data1.set_index("Entity")
-            data1.drop(country1, axis=0)
-    for country2 in formatted_data2:
-        if country2 not in formatted_data1:
+        elif country in formatted_data2:
             data2.set_index("Entity")
-            data2.drop(country2, axis=0)
             
 
 
