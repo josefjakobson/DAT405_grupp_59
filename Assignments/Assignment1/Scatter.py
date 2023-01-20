@@ -9,12 +9,12 @@ def init():
 
 def scatterPlot(csvfile1, csvfile2):
     dfGDP = pd.read_csv(csvfile1)
-    dfLife = pd.read_csv(csvfile2)
+    dfLifeExpectancy = pd.read_csv(csvfile2)
 
 
 
-    for col in dfGDPgrowth.columns:
-        plt.scatter(dfGDPgrowth[col], dfpopulation[col], label= "GDP per capita vs. Life expectancy Worldwise 2019")
+    for col in dfGDP.columns:
+        plt.scatter(dfGDP[col], dfLifeExpectancy[col], label= "GDP per capita vs. Life expectancy Worldwise 2019")
     plt.legend(loc='best', fontsize=16)
     plt.xlabel('Life expectancy')
     plt.ylabel('GDP per capita')
