@@ -27,15 +27,16 @@ def equalize(csvfile1, csvfile2):
     symmetric_difference = formatted_data1 ^ formatted_data2
     for country in symmetric_difference:
         if country in formatted_data1:
-            data1.set_index("Entity")
-            data1.drop(country, axis=0)
+            data1 = data1[data1.Entity != country]
         elif country in formatted_data2:
-            data2.set_index("Entity")
-            data2.drop(labels = country, axis=0)
+            data2 = data2[data2.Entity != country]
+    
+    data1.to_csv(csvfile1, index = False)
+    data2.to_csv(csvfile2, index = False)
 
             
 
 
 main("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv")
 main("Assignments\Assignment1\Data\life-expectancy.csv")
-#equalize("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv", "Assignments\Assignment1\Data\life-expectancy.csv")
+equalize("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv", "Assignments\Assignment1\Data\life-expectancy.csv")
