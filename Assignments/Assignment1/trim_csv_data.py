@@ -8,9 +8,8 @@ def main(csvfile):
       reader=csv.reader(f)
       updatedlist.append(next(reader))
       for row in reader: #for every row in the file
-            
-                if row[2] =="2019": #as long as the username is not in the row .......
-                    updatedlist.append(row) #add each row, line by line, into a list called 'udpatedlist'
+            if row[2] =="2019" and row[1] != '': #as long as the username is not in the row .......
+                updatedlist.append(row) #add each row, line by line, into a list called 'udpatedlist'
       updatefile(csvfile, updatedlist)
         
 def updatefile(csvfile, updatedlist):
@@ -29,11 +28,14 @@ def equalize(csvfile1, csvfile2):
     for country in symmetric_difference:
         if country in formatted_data1:
             data1.set_index("Entity")
+            data1.drop(country, axis=0)
         elif country in formatted_data2:
             data2.set_index("Entity")
+            data2.drop(labels = country, axis=0)
+
             
 
 
 main("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv")
 main("Assignments\Assignment1\Data\life-expectancy.csv")
-equalize("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv", "Assignments\Assignment1\Data\life-expectancy.csv")
+#equalize("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv", "Assignments\Assignment1\Data\life-expectancy.csv")

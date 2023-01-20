@@ -1,10 +1,8 @@
 Entity,Code,Year,Life expectancy at birth (historical)
 Afghanistan,AFG,2019,63.6
-Africa,,2019,62.7
 Albania,ALB,2019,79.3
 Algeria,DZA,2019,76.5
 American Samoa,ASM,2019,72.3
-Americas,,2019,76.71
 Andorra,AND,2019,83
 Angola,AGO,2019,62.4
 Anguilla,AIA,2019,76.9
@@ -12,7 +10,6 @@ Antigua and Barbuda,ATG,2019,78.7
 Argentina,ARG,2019,77.3
 Armenia,ARM,2019,75.4
 Aruba,ABW,2019,76.2
-Asia,,2019,74.2
 Australia,AUS,2019,83.1
 Austria,AUT,2019,81.9
 Azerbaijan,AZE,2019,73.1
@@ -69,7 +66,6 @@ Eritrea,ERI,2019,67.3
 Estonia,EST,2019,78.7
 Eswatini,SWZ,2019,60.5
 Ethiopia,ETH,2019,65.8
-Europe,,2019,79.1
 Faeroe Islands,FRO,2019,78.4
 Falkland Islands,FLK,2019,78.7
 Fiji,FJI,2019,67.9
@@ -94,7 +90,6 @@ Guinea,GIN,2019,59.7
 Guinea-Bissau,GNB,2019,60.9
 Guyana,GUY,2019,69.1
 Haiti,HTI,2019,64.3
-High-income countries,,2019,81.2
 Honduras,HND,2019,72.9
 Hong Kong,HKG,2019,85.3
 Hungary,HUN,2019,76.5
@@ -117,22 +112,14 @@ Kiribati,KIR,2019,67.1
 Kosovo,OWID_KOS,2019,79
 Kuwait,KWT,2019,79.7
 Kyrgyzstan,KGZ,2019,71.2
-Land-locked Developing Countries (LLDC),,2019,65
 Laos,LAO,2019,68.1
-Latin America and the Caribbean,,2019,75.1
 Latvia,LVA,2019,75.5
-Least developed countries,,2019,65
 Lebanon,LBN,2019,79.2
 Lesotho,LSO,2019,54.2
-Less developed regions,,2019,71.3
-"Less developed regions, excluding China",,2019,69.4
-"Less developed regions, excluding least developed countries",,2019,72.6
 Liberia,LBR,2019,61.1
 Libya,LBY,2019,72.5
 Liechtenstein,LIE,2019,84.3
 Lithuania,LTU,2019,76.2
-Low-income countries,,2019,63.3
-Lower-middle-income countries,,2019,68.9
 Luxembourg,LUX,2019,82.1
 Macao,MAC,2019,85
 Madagascar,MDG,2019,65.9
@@ -153,7 +140,6 @@ Monaco,MCO,2019,86.5
 Mongolia,MNG,2019,71.8
 Montenegro,MNE,2019,77
 Montserrat,MSR,2019,75.4
-More developed regions,,2019,79.8
 Morocco,MAR,2019,74.3
 Mozambique,MOZ,2019,61.2
 Myanmar,MMR,2019,66.6
@@ -169,10 +155,8 @@ Nigeria,NGA,2019,52.9
 Niue,NIU,2019,70.7
 North Korea,PRK,2019,73.2
 North Macedonia,MKD,2019,77.3
-Northern America,,2019,79.5
 Northern Mariana Islands,MNP,2019,77.1
 Norway,NOR,2019,83
-Oceania,,2019,78.7
 Oman,OMN,2019,78
 Pakistan,PAK,2019,66.8
 Palau,PLW,2019,64.8
@@ -190,7 +174,6 @@ Reunion,REU,2019,82.1
 Romania,ROU,2019,76.5
 Russia,RUS,2019,73.9
 Rwanda,RWA,2019,66.4
-Saint Barthlemy,,2019,80.1
 Saint Helena,SHN,2019,76.7
 Saint Kitts and Nevis,KNA,2019,71.6
 Saint Lucia,LCA,2019,73.4
@@ -209,7 +192,6 @@ Singapore,SGP,2019,83.8
 Sint Maarten (Dutch part),SXM,2019,75.4
 Slovakia,SVK,2019,77.7
 Slovenia,SVN,2019,81.6
-Small Island Developing States (SIDS),,2019,72.4
 Solomon Islands,SLB,2019,70.4
 Somalia,SOM,2019,57.1
 South Africa,ZAF,2019,66.2
@@ -242,7 +224,6 @@ United Arab Emirates,ARE,2019,79.7
 United Kingdom,GBR,2019,81.7
 United States,USA,2019,79.1
 United States Virgin Islands,VIR,2019,75.1
-Upper-middle-income countries,,2019,76.5
 Uruguay,URY,2019,77.5
 Uzbekistan,UZB,2019,71.3
 Vanuatu,VUT,2019,69.9
