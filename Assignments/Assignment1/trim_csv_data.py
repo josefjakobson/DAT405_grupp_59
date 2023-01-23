@@ -35,7 +35,7 @@ def equalize(csvfile1, csvfile2):
     data2.to_csv(csvfile2, index=False)
             
 
-
-main("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv")
-main("Assignments\Assignment1\Data\life-expectancy.csv")
-equalize("Assignments\Assignment1\Data\gdp-per-capita-in-us-dollar-world-bank.csv", "Assignments\Assignment1\Data\life-expectancy.csv")
+def init(csv1, csv2):
+    main(csv1)
+    main(csv2)
+    equalize(csv1, csv2)

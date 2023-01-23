@@ -1,9 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def init():
-    csvfile = "Assignments\Assignment1\Data\merged_data.csv"
-    return csvfile
+def init(csv):
+    scatterPlot(csv)
 
 
 def scatterPlot(csvfile): #Plots the data as a scatter graph with GDP per capita on the x-axis and life expectancy on the y-axis
@@ -17,6 +16,4 @@ def scatterPlot(csvfile): #Plots the data as a scatter graph with GDP per capita
     plt.show()
 
 
-csvfile = init()
-scatterPlot(csvfile)
 
