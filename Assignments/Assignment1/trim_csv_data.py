@@ -9,7 +9,7 @@ def main(csvfile):
       updatedlist.append(next(reader))
       for row in reader: #for every row in the file
             
-                if row[2] =="2019": #as long as the username is not in the row .......
+                if row[2] =="2019" and row[1] != '': #as long as the username is not in the row .......
                     updatedlist.append(row) #add each row, line by line, into a list called 'udpatedlist'
       updatefile(csvfile, updatedlist)
         
