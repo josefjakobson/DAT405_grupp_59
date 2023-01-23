@@ -8,8 +8,9 @@ def main(csvfile):
       reader=csv.reader(f)
       updatedlist.append(next(reader))
       for row in reader: #for every row in the file
-            if row[2] =="2019" and row[1] != '': #as long as the username is not in the row .......
-                updatedlist.append(row) #add each row, line by line, into a list called 'udpatedlist'
+            
+                if row[2] =="2019": #as long as the username is not in the row .......
+                    updatedlist.append(row) #add each row, line by line, into a list called 'udpatedlist'
       updatefile(csvfile, updatedlist)
         
 def updatefile(csvfile, updatedlist):
@@ -24,16 +25,14 @@ def equalize(csvfile1, csvfile2):
     data2 = pd.read_csv(csvfile2)
     formatted_data1 = set(data1["Entity"])
     formatted_data2 = set(data2["Entity"])
-    symmetric_difference = formatted_data1 ^ formatted_data2
-    for country in symmetric_difference:
+    unique_elements = formatted_data1 ^ formatted_data2
+    for country in unique_elements:
         if country in formatted_data1:
-            data1 = data1[data1.Entity != country]
+            data1 = data1.query('Entity != @country')
         elif country in formatted_data2:
-            data2 = data2[data2.Entity != country]
-    
-    data1.to_csv(csvfile1, index = False)
-    data2.to_csv(csvfile2, index = False)
-
+            data2 = data2.query('Entity != @country')
+    data1.to_csv(csvfile1, index=False)
+    data2.to_csv(csvfile2, index=False)
             
 
 
