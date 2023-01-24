@@ -7,6 +7,5 @@ def init(csv1, csv2):
     data1 = pd.read_csv(csv1)
     data2 = pd.read_csv(csv2)
 
-    data1["Life_expectancy"] = data2["Life_expectancy"]
-
-    data1.to_csv("Assignments\Assignment1\Data\merged_data.csv", index=False)
+    #pd.concat([data1, data2], axis=1).to_csv("Assignments\Assignment1\Data\merged_data.csv", index=False)
+    data1.merge(data2).to_csv("Assignments\Assignment1\Data\merged_data.csv", index=False)

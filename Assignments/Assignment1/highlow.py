@@ -10,3 +10,5 @@ for elem in data_Life.loc[data_Life ["Life_expectancy"] > mean_Life]:
 # locates all entries where life expectancy was higher than the mean and
 # GDP lower than the mean
         print(elem)
+
+

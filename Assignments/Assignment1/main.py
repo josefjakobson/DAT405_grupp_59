@@ -11,6 +11,7 @@ def start():
     trim_csv_data.main(gdp_total_csv)
     merge.init(gdp_csv, life_expectancy_csv)
     trim_csv_data.equalize(merged, gdp_total_csv)
+    merge.init(gdp_total_csv, merged)
     Scatter.init(merged)
 
 start()
