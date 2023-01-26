@@ -18,7 +18,7 @@ def updatefile(csvfile, updatedlist):
         print("File has been updated")
 
 
-def equalize(csvfile1, csvfile2):
+def equalize(csvfile1, csvfile2): 
     #This function collects any unique elements that only exist in one of the datasets and removes them
 
     data1 = pd.read_csv(csvfile1)
