@@ -1,6 +1,6 @@
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
 
 # Loads iris dataset
@@ -25,9 +25,6 @@ y_prediction = classify.predict(X_train)
 # Create a confusion matrix
 conf_mat = confusion_matrix(y_test, y_prediction)
 print("Confusion Matrix: \n", conf_mat)
-
-conf_mat_normalized = confusion_matrix(y_test, y_prediction)
-print("Normalized confusion Matrix: \n",True, conf_mat_normalized)
 
 class_report = classification_report(y_test, y_prediction)
 print("\nClassification Report: \n", class_report)
