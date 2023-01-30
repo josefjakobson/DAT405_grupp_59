@@ -25,6 +25,3 @@ y_prediction = classify.predict(X_train)
 # Creates the confusion matrix and classification report
 conf_mat = confusion_matrix(y_test, y_prediction)
 print("Confusion Matrix: \n", conf_mat)
-
-class_report = classification_report(y_test, y_prediction)
-print("\nClassification Report: \n", class_report)
