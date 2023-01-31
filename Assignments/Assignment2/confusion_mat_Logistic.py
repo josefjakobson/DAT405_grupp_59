@@ -8,7 +8,6 @@ iris = load_iris()
 X = iris.data
 y = iris.target
 
-
 # Splits data into test and training
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
 
@@ -20,7 +19,6 @@ classify_Logistic.fit(X_train, y_train)
 
 # Predicts dataset class labels
 y_prediction = classify_Logistic.predict(X_test)
-
 
 # Creates the confusion matrix and classification report
 conf_mat = confusion_matrix(y_test, y_prediction)
