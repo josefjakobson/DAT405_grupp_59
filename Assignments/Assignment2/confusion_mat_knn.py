@@ -3,8 +3,10 @@ import seaborn as sns
 from matplotlib.colors import ListedColormap
 from sklearn import neighbors, datasets
 from sklearn.inspection import DecisionBoundaryDisplay
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split
 
-n_neighbors = 15
 
 # import some data to play with
 iris = datasets.load_iris()
@@ -13,42 +15,23 @@ iris = datasets.load_iris()
 # slicing by using a two-dim dataset
 X = iris.data[:, :2]
 y = iris.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
 
 # Create color maps
 cmap_light = ListedColormap(["orange", "cyan", "cornflowerblue"])
 cmap_bold = ["darkorange", "c", "darkblue"]
 
 for weights in ["uniform", "distance"]:
-    # we create an instance of Neighbours Classifier and fit the data.
-    clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
-    clf.fit(X, y)
-
-    _, ax = plt.subplots()
-    DecisionBoundaryDisplay.from_estimator(
-        clf,
-        X,
-        cmap=cmap_light,
-        ax=ax,
-        response_method="predict",
-        plot_method="pcolormesh",
-        xlabel=iris.feature_names[0],
-        ylabel=iris.feature_names[1],
-        shading="auto",
-    )
-
-    # Plot also the training points
-    sns.scatterplot(
-        x=X[:, 0],
-        y=X[:, 1],
-        hue=iris.target_names[y],
-        palette=cmap_bold,
-        alpha=1.0,
-        edgecolor="black",
-    )
-    plt.title(
-        "3-Class classification (k = %i, weights = '%s')" % (n_neighbors, weights)
-    )
-
+    for k in range(1, 101, 10):
+        # we create an instance of Neighbours Classifier and fit the data.
+        knn = neighbors.KNeighborsClassifier(k, weights=weights).fit(X, y)
+        # Plot also the training points
+        print(weights, ": ", knn.score(X_train, y_train), "\n")
+        y_pred = knn.predict(X_test)
+        knn_conf_mat = confusion_matrix(y_test, y_pred)
+        print(f"Confusion Matrix with weight {weights} and k = {k}: \n", knn_conf_mat)
+        class_report = classification_report(y_test, y_pred)
+        print(f"\nClassification Report with weight {weights} and k = {k}: \n", class_report)
 
 
 plt.show()
