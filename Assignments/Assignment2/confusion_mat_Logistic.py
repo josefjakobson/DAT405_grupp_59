@@ -16,10 +16,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_
 classify_Logistic = LogisticRegression(max_iter=10000)
 
 # Fit the model to the training data
-classify.fit(X_train, y_train)
+classify_Logistic.fit(X_train, y_train)
 
 # Predicts dataset class labels
-y_prediction = classify.predict(X_train)
+y_prediction = classify_Logistic.predict(X_test)
 
 
 # Creates the confusion matrix and classification report
