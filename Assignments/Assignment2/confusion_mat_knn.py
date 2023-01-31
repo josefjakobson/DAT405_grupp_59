@@ -49,4 +49,6 @@ for weights in ["uniform", "distance"]:
         "3-Class classification (k = %i, weights = '%s')" % (n_neighbors, weights)
     )
 
+
+
 plt.show()
