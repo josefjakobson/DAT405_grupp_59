@@ -5,7 +5,7 @@ import seaborn as sns
 
 data = pd.read_csv("Assignments\Assignment3\Data\data_assignment3.csv")
     
-sns.histplot(data=data, x="phi", y="psi")
+sns.histplot(data=data, x="phi")
     
 plt.show()
 
