@@ -10,7 +10,7 @@ data = pd.read_csv("Assignments\Assignment3\Data\data_assignment3.csv")
 
 df = pd.DataFrame(data, columns=['psi','phi'])
 
-for i in range(1-9):
+for i in range(1,9):
     KM = KMeans(n_clusters=i).fit(df)
     intertia_list.append(KM.inertia_)
     k_list.append(i)
@@ -22,7 +22,7 @@ plt.figure(figsize=(5,20))
 plt.plot(k_list, intertia_list)
 plt.title('Elbow method')
 plt.xlabel('K')
-plt.ylabel('Error^2')
+plt.ylabel('Diameter')
 plt.show()
 
 
