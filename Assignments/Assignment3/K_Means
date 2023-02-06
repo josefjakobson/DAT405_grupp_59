@@ -1,0 +1,16 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+
+data = pd.read_csv("Assignments\Assignment3\Data\data_assignment3.csv")
+
+df = pd.DataFrame(data, columns=['psi','phi'])
+
+KM = KMeans(n_clusters=3).fit(df)
+
+plt.scatter(df['phi'], df['psi'], c=KM.labels_.astype(float))
+plt.show()
+
+

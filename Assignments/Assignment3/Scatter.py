@@ -5,7 +5,7 @@ import seaborn as sns
 
 data = pd.read_csv("Assignments\Assignment3\Data\data_assignment3.csv")
     
-sns.scatterplot(data=data, x="phi", y="psi")
+sns.scatterplot(data=data, x="phi", y="psi", s=3)
     
 plt.show()
 
