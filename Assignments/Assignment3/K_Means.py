@@ -18,7 +18,6 @@ for i in range(1,9):
 #plt.scatter(df['phi'], df['psi'], c=KM.labels_.astype(float))
 #plt.show()
 
-plt.figure(figsize=(5,20))
 plt.plot(k_list, intertia_list)
 plt.title('Elbow method')
 plt.xlabel('K')
